@@ -1,5 +1,3 @@
-#과제4
-
 #1. 선형대수와 R
 A <- matrix(data = 1:36, nrow = 6)
 A
@@ -174,8 +172,6 @@ C
 all.equal (tr (A %*% B %*% C), tr (C %*% A %*% B))
 all.equal (tr (C %*% A %*% B), tr (B %*% C %*% A))
 
-
-
 #2. Singular Value Decomposition
 education.by.readership <- matrix(c(5,18,19,12,3,7,46,29,40,7,2,20,39,49,16), 
   nrow <- 5)
@@ -285,8 +281,6 @@ y1 <- xxd[, 2]
 plot(x1, y1)
 text(x1 + 20, y1, label = cnut$brand)
 
-
-
 #3. Similarity and Dissimilarity
 # Subset of the data
 set.seed (123 )
@@ -318,8 +312,6 @@ round (as.matrix (dd )[ 1:3, 1:3], 2)
 
 library (factoextra )
 fviz_dist (dist.eucl )
-
-
 
 #4. Multidimensional Scaling
 url <- "http://rosetta.reltech.org/TC/v1 5/Mapping/data/dist -Aus.csv"
@@ -414,8 +406,6 @@ ggscatter (mds.cor , x = "Dim.1" , y = "Dim.2" ,
   size = 1,
   label = colnames (res.cor ),
   repel = TRUE )
-
-
 
 #5. Principal Components Analysis
 library(datasets)

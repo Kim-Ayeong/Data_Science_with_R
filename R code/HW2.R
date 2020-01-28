@@ -1,4 +1,4 @@
-< Section 3: Univariate Data >
+#< Section 3: Univariate Data >
 
 x=c("Yes","No","No","Yes","Yes")
 table(x)
@@ -100,9 +100,7 @@ hist(eruptions,15,prob=T) 			# proportions, not frequencies
 lines(density(eruptions)) 			# lines makes a curve, default bandwidth
 lines(density(eruptions,bw="SJ"),col='red') 	# Use SJ bandwidth, in red
 
-
-
-< Section 4: Bivariate Data >
+#< Section 4: Bivariate Data >
 
 smokes = c("Y","N","N","Y","N","Y","Y","Y","N","Y")
 amount = c(1,2,2,3,3,1,2,1,3,2)
@@ -261,9 +259,7 @@ points(miles,360 - 7.3*miles,type="l")
 lines(miles,360 - 7.3*miles)
 curve(360 - 7.3*x,add=T) 	# add a function of x
 
-
-
-< Section 5: Multivariate Data >
+#< Section 5: Multivariate Data >
 
 weight = c(150, 135, 210, 140)
 height = c(65, 61, 70, 65)
@@ -369,9 +365,7 @@ plot.regression = function(x,y) {
 trellis.device(bg="white") 			# set background to white.
 xyplot(MPG.highway ~ Fuel.tank.capacity | Type, panel = plot.regression)
 
-
-
-< Section 6: Random Data >
+#< Section 6: Random Data >
 
 sample(1:6,10,replace=T)
 
@@ -449,9 +443,7 @@ z
 pnorm(z)
 pnorm(x,100,16) 			# enter in parameters
 
-
-
-< Section 7: Simulations >
+#< Section 7: Simulations >
 
 n=10; p=.25; S= rbinom(1,n,p)
 (S - n*p)/sqrt(n*p*(1-p))
@@ -523,9 +515,7 @@ xvals = seq(-3,3,.01) 				# for the density plot
 hist(simple.sim(100,f,1,10),probability=TRUE,main="n=1",col=gray(.95))
 points(xvals,dnorm(xvals,0,1),type="l") 	# plot normal curve
 
-
-
-< Section 8: Exploratory Data Analysis >
+#< Section 8: Exploratory Data Analysis >
 
 data(homedata) 				# from simple package
 attach(homedata)
@@ -564,9 +554,7 @@ X=sample(1:6,100,p=7-(1:6),replace=T);boxplot(X,horizontal=T,bty=n)
 X=abs(rnorm(200));boxplot(X,horizontal=T,bty=n)
 X=rexp(200);boxplot(X,horizontal=T,bty=n)
 
-
-
-< Section 9: Condence Interval Estimation >
+#< Section 9: Condence Interval Estimation >
 
 alpha = c(0.2,0.1,0.05,0.001)
 zstar = qnorm(1 - alpha/2)
@@ -610,9 +598,7 @@ for(i in c(2,5,10,20,50)) points(xvals,dt(xvals,df=i),type="l",lty=i)
 x = c(110, 12, 2.5, 98, 1017, 540, 54, 4.3, 150, 432)
 wilcox.test(x,conf.int=TRUE)
 
-
-
-< Section 10: Hypothesis Testing >
+#< Section 10: Hypothesis Testing >
 
 prop.test(42,100,p=.5)
 
@@ -634,9 +620,7 @@ x = c(12.8,3.5,2.9,9.4,8.7,.7,.2,2.8,1.9,2.8,3.1,15.8)
 simple.median.test(x,median=5) 		# accept
 simple.median.test(x,median=10) 	# reject
 
-
-
-< Section 11: Two-sample tests >
+#< Section 11: Two-sample tests >
 
 prop.test(c(45,56),c(45+35,56+47))
 
@@ -661,9 +645,7 @@ boxplot(x,y) 			# not shown
 
 wilcox.test(x,y)
 
-
-
-< Section 12: Chi Square Tests >
+#< Section 12: Chi Square Tests >
 
 x = rchisq(100,5); y=rchisq(100,50)
 simple.eda(x); simple.eda(y)

@@ -1,5 +1,3 @@
-#µ¥»ç °úÁ¦ 7
-
 #Linear Regression
 
 #1. Packages
@@ -8,8 +6,6 @@ library(plyr)
 library(ggplot2)
 library(knitr)
 library(GGally)
-
-
 
 #2. Linear regression
 # Import data set
@@ -103,8 +99,6 @@ crime.lm.summary.2 <- summary(crime.lm.2)
 
 kable(crime.lm.summary.2$coef, digits = c(3, 3, 3, 4), format = 'markdown')
 
-
-
 #3. Thinking more critically about linear regression
 crime.lm <- lm(crime.per.million ~ ., data = crime)
 crime.lm2 <- update(crime.lm, . ~ . - exp.per.cap.1959 - unemp.youth)
@@ -135,10 +129,8 @@ crime.lm.summary2$coef["exp.per.cap.1960",]
 
 crime.lm.summary2$coef["average.ed",]
 
-
-
 #4. Factors in linear regression
-#Ãß°¡
+#ì¶”ê°€
 colnames(birthwt) <- c("birthwt.below.2500", "mother.age", "mother.weight", 
     "race", "mother.smokes", "previous.prem.labor", "hypertension", "uterine.irr", 
     "physician.visits", "birthwt.grams")

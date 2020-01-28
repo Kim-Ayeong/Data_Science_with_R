@@ -1,5 +1,3 @@
-#µ¥ÀÌÅÍ »çÀÌ¾ğ½º °úÁ¦6
-
 #1) Decision Trees with Package party
 str(iris)
 set.seed(1234)
@@ -24,7 +22,7 @@ testPred <- predict(iris_ctree, newdata=testData)
 table(testPred, testData$Species)
 
 #2) Decision Trees with Package rpart
-#data("bodyfat", package = "mboost") #´õÀÌ»ó mboost¿¡ Á¸ÀçX, TH.data ÆĞÅ°Áö¿¡ Á¸ÀçO
+#data("bodyfat", package = "mboost") #ë”ì´ìƒ mboostì— ì¡´ì¬X, TH.data íŒ¨í‚¤ì§€ì— ì¡´ì¬O
 #install.packages("TH.data")
 library(TH.data)
 data("bodyfat")
@@ -53,7 +51,7 @@ opt <- which.min(bodyfat_rpart$cptable[,"xerror"])
 cp <- bodyfat_rpart#cptable[opt, "CP"]
 
 bodyfat_prune <- prune(bodyfat_rpart, cp = cp)
-#¿À·ù ¹ß»ı
+#ì˜¤ë¥˜ ë°œìƒ
 #print(bodyfat_prune)
 
 #plot(bodyfat_prune)
@@ -87,7 +85,7 @@ irisPred <- predict(rf, newdata=testData)
 table(irisPred, testData$Species)
 plot(margin(rf, testData$Species))
 
-#4) ROCR ÆĞÅ°Áö·Î ¼º°úºĞ¼®
+#4) ROCR íŒ¨í‚¤ì§€ë¡œ ì„±ê³¼ë¶„ì„
 #install.packages("party")
 #install.packages("ROCR")
 library(rpart)

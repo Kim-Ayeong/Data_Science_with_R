@@ -1,5 +1,3 @@
-#데사 과제 8
-
 #1. Getting started
 tui <- read.csv("tui.csv", header=T, dec=",", sep=";")
 
@@ -29,11 +27,9 @@ ks.test(x,"pnorm",mean(x),sd(x))
 
 shapiro.test(x)
 
-
-
 #2. Simple Component Analysis
 #library(ts)
-#install.packages("timeSeries") 로 바뀜
+#install.packages("timeSeries")
 library(timeSeries)
 
 plot(tui[,5],type="l")
@@ -65,8 +61,6 @@ lines(lm(lbeer~t+t2+sin.t+cos.t)$fit,col=4)
 
 summary(lm(lbeer~t+t2+sin.t+cos.t))
 
-
-
 #3. Exponential Smoothing
 beer<-read.csv("beer.csv",header=T,dec=",",sep=";")
 beer<-ts(beer[,1],start=1956,freq=12)
@@ -83,9 +77,7 @@ predict(beer.hw,n.ahead=12)
 plot(beer,xlim=c(1956,1999))
 lines(predict(beer.hw,n.ahead=48),col=2)
 
-
-
-#4. ARIMA?Models
+#4. ARIMA Models
 sim.ar<-arima.sim(list(ar=c(0.4,0.4)),n=1000)
 sim.ma<-arima.sim(list(ma=c(0.6,-0.4)),n=1000)
 par(mfrow=c(2,2))

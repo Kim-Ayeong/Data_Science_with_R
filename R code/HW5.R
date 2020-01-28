@@ -1,5 +1,3 @@
-#데사 과제
-
 #1. Support Vector Machines (SVM)
 #1) Support Vector Machines Algorithm
 

@@ -1,5 +1,3 @@
-1. “과제 02. SimpleR.pdf” 튜토리얼 페이지 100 ~ 121
-
 #Section 13: Regression Analysis
 
 x = c(18,23,25,35,65,54,34,56,72,19,23,42,18,39,37)
@@ -72,8 +70,6 @@ points(sort(x), ci.lwr,type="l") 		# or use lines()
 
 curve(predict(lm.result,data.frame(x=x), interval="confidence")[,3],add=T)
 
-
-
 #Section 14: Multiple Linear Regression
 
 x = 1:10
@@ -133,8 +129,6 @@ makesquare = sapply(pts,function(x) coef(lm.2) %*% x^(0:2))
 lines(pts,makecube,lty=1)
 lines(pts,makesquare,lty=2)
 
-
-
 #Section 15: Analysis of Variance
 
 x = c(4,3,4,5,2,3,4,5)
@@ -155,9 +149,7 @@ anova(lm(values ~ ind, data=df))
 
 kruskal.test(values ~ ind, data=df)
 
-
-
-2. Understanding Naive Bayes Classifier Using R
+#2. Understanding Naive Bayes Classifier Using R
 
 #Getting started with Naive Bayes
 #Install the package
@@ -214,9 +206,7 @@ predictions_mlr = as.data.frame(predict(NB_mlr, newdata = Titanic_dataset[,1:3])
 ##Confusion matrix to check accuracy
 table(predictions_mlr[,1],Titanic_dataset$Survived)
 
-
-
-3. Fitting a Model by Maximum Likelihood
+#3. Fitting a Model by Maximum Likelihood
 
 set.seed(1001)
 N <- 100
@@ -300,9 +290,7 @@ library(bbmle)
 fit <- mle2(LL, start = list(beta0 = 3, beta1 = 1, mu = 0, sigma = 1))
 summary(fit)
 
-
-
-4. Density Estimation: “과제 03. Density Estimation Using R.pdf” 튜토리얼
+#4. Density Estimation: “과제 03. Density Estimation Using R.pdf” 튜토리얼
 
 #7.1 Introduction
 #7.2 Density Estimation
@@ -446,9 +434,7 @@ bootplot(bootpara, 3, main = expression(mu[2]))
   points(est, y, pch = 19)
 }
 
-
-
-5. Understanding the EM (Expectation Maximization) Algorithm
+#5. Understanding the EM (Expectation Maximization) Algorithm
 
 set.seed(123) ## ensures we all see the same output
 trueMean <- 10 ## suppose this true mean is unknown
